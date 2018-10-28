@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Using Theirs</title>
   
-  <subtitle>Best Assets For Your Success</subtitle>
+  <subtitle>Ideas that make our lives better</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://usingtheirs.github.io/"/>
-  <updated>2018-10-23T13:30:38.964Z</updated>
+  <updated>2018-10-28T13:44:36.970Z</updated>
   <id>https://usingtheirs.github.io/</id>
   
   <author>
@@ -17,51 +17,54 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World</title>
-    <link href="https://usingtheirs.github.io/2018/10/23/hello-world/"/>
-    <id>https://usingtheirs.github.io/2018/10/23/hello-world/</id>
-    <published>2018-10-23T13:30:38.964Z</published>
-    <updated>2018-10-23T13:30:38.964Z</updated>
+    <title>Considerations in Remote Inspector</title>
+    <link href="https://usingtheirs.github.io/2018/10/28/Considerations-in-Remote-Inspector/"/>
+    <id>https://usingtheirs.github.io/2018/10/28/Considerations-in-Remote-Inspector/</id>
+    <published>2018-10-28T13:35:39.000Z</published>
+    <updated>2018-10-28T13:44:36.970Z</updated>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2>Quick Start</h2><h3>Create a new post</h3><p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure></p><p>Realtime</p><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3>Run server</h3><p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></p><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3>Generate static files</h3><p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></p><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3>Deploy to remote sites</h3><p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></p><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<p><img src="/images/Choice.jpg" alt=""></p><p>Programming is a series of choices. There were so many trade-offs in developing<br>Remote Inspector. Below are major decisions I have encountered during the development.</p><p>(If you don’t know what Remote Inspector is, I recommend you to check this <a href="/remote-inspector/index.html">page</a> out.)</p><h3 id="Whether-to-support-Custom-Editor-UI"><a href="#Whether-to-support-Custom-Editor-UI" class="headerlink" title="Whether to support Custom Editor UI"></a>Whether to support Custom Editor UI</h3><p>Unity allows you to customize Inspector UIs, and Unity itself provides a variety of custom inspectors for built-in components such as MeshRenderer and Camera. When I started this project, I wanted to support these custom UIs. But after some research, I realized how it was difficult. And I also wanted to provide features like editing private fields and properties, builtin custom UIs didn’t fit well with Remote Inspector. So, I decided not to support custom editor UIs.</p><h3 id="Where-to-put-the-server"><a href="#Where-to-put-the-server" class="headerlink" title="Where to put the server"></a>Where to put the server</h3><p>To establish a connection between the Unity Editor and the device, one of them should be a server. The advantage of running the server on the Unity editor (PC) side is that the client (a game running on a device) can connect to the server only when using Remote Inspector. And it is possible to hard-code the address of the PC into the APK.<br>On the other hand, the advantage of running the server on the game (device) side is that connecting from a PC is more convenient. It’s easier to enter the address of the device on the Unity editor. And you can plenty of tools to diagnose connection problems.<br>Therefore, I decided to put the server on the device side.</p><h3 id="What-protocol-to-use"><a href="#What-protocol-to-use" class="headerlink" title="What protocol to use"></a>What protocol to use</h3><p>At first, I looked into the Protocol Buffer. I was attracted to its optional feature. As I thought it would useful for the treatment for version compatibility issues. But things were going well. There was no official Protocol Buffer version for Unity. And It seemed like that it’s bothersome to generate protocol dlls from proto files.<br>Eventually, I decided to use HTTP/JSON. It was simple to implement and there were lots of tools to debug it. Actually, you can use a web browser to communicate with a Remote Inspector server running on a device.</p><h3 id="Best-way-to-make-a-choice"><a href="#Best-way-to-make-a-choice" class="headerlink" title="Best way to make a choice"></a>Best way to make a choice</h3><p>Programming is really a series of choices. In my opinion, the best way to make a choice is to decide and experiment it quickly.</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+        &lt;p&gt;&lt;img src=&quot;/images/Choice.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Programming is a series of choices. There were so many trade-offs in developing&lt;br&gt;Remote In
       
     
     </summary>
     
+      <category term="Dev Log" scheme="https://usingtheirs.github.io/categories/Dev-Log/"/>
+    
+    
+      <category term="Remote Inspector" scheme="https://usingtheirs.github.io/tags/Remote-Inspector/"/>
     
   </entry>
   
   <entry>
-    <title>Second Post</title>
-    <link href="https://usingtheirs.github.io/2018/10/23/Second-Post/"/>
-    <id>https://usingtheirs.github.io/2018/10/23/Second-Post/</id>
-    <published>2018-10-23T00:35:23.000Z</published>
-    <updated>2018-10-23T13:30:38.964Z</updated>
+    <title>Why I decided to create Remote Inspector</title>
+    <link href="https://usingtheirs.github.io/2018/10/26/Why-I-decided-to-create-Remote-Inspector/"/>
+    <id>https://usingtheirs.github.io/2018/10/26/Why-I-decided-to-create-Remote-Inspector/</id>
+    <published>2018-10-26T01:01:00.000Z</published>
+    <updated>2018-10-26T15:41:47.510Z</updated>
     
-    <content type="html"><![CDATA[<p>Oh my god, OTL.</p>]]></content>
+    <content type="html"><![CDATA[<p><img src="/images/BloggerAndPhone.jpg" alt=""></p><h3 id="Difficuly-of-Debugging-on-Devices"><a href="#Difficuly-of-Debugging-on-Devices" class="headerlink" title="Difficuly of Debugging on Devices"></a>Difficuly of Debugging on Devices</h3><p>If you’ve ever developed mobile games, you will know that some bugs occur only on mobile devices. Especially when you debug rendering problems or optimize rendering you have to run your game on mobile devices. But as you know, debugging on the mobile is really hard and time-consuming. You have to rebuild an APK or an IPA continuously to modify your code. Building an APK takes many minutes to hours based on your project’s size. You may spend most of your working time at building binaries.</p><p>So, I decided to create a tool which enables me to view the hierarchy and modify components’ variables. I expected this tool would save lots of my time. And the result?</p><h3 id="Is-Remote-Inspector-Helpful"><a href="#Is-Remote-Inspector-Helpful" class="headerlink" title="Is Remote Inspector Helpful?"></a>Is Remote Inspector Helpful?</h3><p>It was awesome. I was able to identify problems quickly. </p><p>For example, I got a black screen on some devices. I built an APK with Remote Inspector enabled. Next, I turned game object or components on and off on the runtime. and I modified some suspicious settings or values on the runtime, too. After some inspection, I found the problem was  Camera’s HDR setting. I used HDR buffer for bloom effect. But some old devices didn’t support HDR buffer. Finally, I turned off the bloom effect on those devices.</p><p>If I had to debug this problem without Remote Inspector? Maybe, I would spend a few days to repeat the process of adding some code and rebuilding an apk. If you are like me, why don’t you check what <a href="/remote-inspector/index.html">Remote Inspector</a> is?</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;Oh my god, OTL.&lt;/p&gt;
-
+        &lt;p&gt;&lt;img src=&quot;/images/BloggerAndPhone.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Difficuly-of-Debugging-on-Devices&quot;&gt;&lt;a href=&quot;#Difficuly-of-Debugging-on-Devices
       
     
     </summary>
     
-      <category term="Remote Inspector" scheme="https://usingtheirs.github.io/categories/remote-inspector/"/>
+      <category term="Dev Log" scheme="https://usingtheirs.github.io/categories/Dev-Log/"/>
     
     
-      <category term="Unity Asset" scheme="https://usingtheirs.github.io/tags/unity-asset/"/>
-    
-      <category term="Tag2" scheme="https://usingtheirs.github.io/tags/Tag2/"/>
+      <category term="Remote Inspector" scheme="https://usingtheirs.github.io/tags/Remote-Inspector/"/>
     
   </entry>
   
