@@ -12,19 +12,19 @@
     
         <meta name="keywords" content="Remote Inspector">
     
-    <meta name="description" content="Programming is a series of choices. There were so many trade-offs in developingRemote Inspector. Below are major decisions I have encountered during the development. (If you don’t know what Remote In">
+    <meta name="description" content="Programming is a series of choices. There were so many trade-offs in developing Remote Inspector. Below are major decisions I have encountered during the development. (If you don’t know what Remote I">
 <meta name="keywords" content="Remote Inspector">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Considerations in Remote Inspector">
 <meta property="og:url" content="https://usingtheirs.github.io/2018/10/28/Considerations-in-Remote-Inspector/index.html">
 <meta property="og:site_name" content="Using Theirs">
-<meta property="og:description" content="Programming is a series of choices. There were so many trade-offs in developingRemote Inspector. Below are major decisions I have encountered during the development. (If you don’t know what Remote In">
+<meta property="og:description" content="Programming is a series of choices. There were so many trade-offs in developing Remote Inspector. Below are major decisions I have encountered during the development. (If you don’t know what Remote I">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://usingtheirs.github.io/images/Choice.jpg">
-<meta property="og:updated_time" content="2018-10-28T13:44:36.970Z">
+<meta property="og:updated_time" content="2018-10-28T14:55:08.335Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Considerations in Remote Inspector">
-<meta name="twitter:description" content="Programming is a series of choices. There were so many trade-offs in developingRemote Inspector. Below are major decisions I have encountered during the development. (If you don’t know what Remote In">
+<meta name="twitter:description" content="Programming is a series of choices. There were so many trade-offs in developing Remote Inspector. Below are major decisions I have encountered during the development. (If you don’t know what Remote I">
 <meta name="twitter:image" content="https://usingtheirs.github.io/images/Choice.jpg">
     
 
@@ -191,9 +191,9 @@ ga('send', 'pageview');
         
         <div class="article-entry" itemprop="articleBody">
             <p><img src="/images/Choice.jpg" alt=""></p>
-<p>Programming is a series of choices. There were so many trade-offs in developing<br>Remote Inspector. Below are major decisions I have encountered during the development.</p>
+<p>Programming is a series of choices. There were so many trade-offs in developing Remote Inspector. Below are major decisions I have encountered during the development.</p>
 <p>(If you don’t know what Remote Inspector is, I recommend you to check this <a href="/remote-inspector/index.html">page</a> out.)</p>
-<h3 id="Whether-to-support-Custom-Editor-UI"><a href="#Whether-to-support-Custom-Editor-UI" class="headerlink" title="Whether to support Custom Editor UI"></a>Whether to support Custom Editor UI</h3><p>Unity allows you to customize Inspector UIs, and Unity itself provides a variety of custom inspectors for built-in components such as MeshRenderer and Camera. When I started this project, I wanted to support these custom UIs. But after some research, I realized how it was difficult. And I also wanted to provide features like editing private fields and properties, builtin custom UIs didn’t fit well with Remote Inspector. So, I decided not to support custom editor UIs.</p>
+<h3 id="Whether-to-support-Custom-Editor-UI"><a href="#Whether-to-support-Custom-Editor-UI" class="headerlink" title="Whether to support Custom Editor UI"></a>Whether to support Custom Editor UI</h3><p>Unity allows you to customize Inspector UIs, and Unity itself provides a variety of custom inspectors for built-in components such as MeshRenderer and Camera. When I started this project, I wanted to support these custom UIs. But after some research, I realized how it was difficult. And I also wanted to provide features like editing private fields and properties. So built-in custom UIs didn’t fit well with Remote Inspector. </p>
 <h3 id="Where-to-put-the-server"><a href="#Where-to-put-the-server" class="headerlink" title="Where to put the server"></a>Where to put the server</h3><p>To establish a connection between the Unity Editor and the device, one of them should be a server. The advantage of running the server on the Unity editor (PC) side is that the client (a game running on a device) can connect to the server only when using Remote Inspector. And it is possible to hard-code the address of the PC into the APK.<br>On the other hand, the advantage of running the server on the game (device) side is that connecting from a PC is more convenient. It’s easier to enter the address of the device on the Unity editor. And you can plenty of tools to diagnose connection problems.<br>Therefore, I decided to put the server on the device side.</p>
 <h3 id="What-protocol-to-use"><a href="#What-protocol-to-use" class="headerlink" title="What protocol to use"></a>What protocol to use</h3><p>At first, I looked into the Protocol Buffer. I was attracted to its optional feature. As I thought it would useful for the treatment for version compatibility issues. But things were going well. There was no official Protocol Buffer version for Unity. And It seemed like that it’s bothersome to generate protocol dlls from proto files.<br>Eventually, I decided to use HTTP/JSON. It was simple to implement and there were lots of tools to debug it. Actually, you can use a web browser to communicate with a Remote Inspector server running on a device.</p>
 <h3 id="Best-way-to-make-a-choice"><a href="#Best-way-to-make-a-choice" class="headerlink" title="Best way to make a choice"></a>Best way to make a choice</h3><p>Programming is really a series of choices. In my opinion, the best way to make a choice is to decide and experiment it quickly.</p>
@@ -204,7 +204,7 @@ ga('send', 'pageview');
 
 
 
-    <a data-url="https://usingtheirs.github.io/2018/10/28/Considerations-in-Remote-Inspector/" data-id="cjnsyo8yd0000nvlv869x6tt4" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://usingtheirs.github.io/2018/10/28/Considerations-in-Remote-Inspector/" data-id="cjnsz28fg0000mllvdzsni4u4" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
