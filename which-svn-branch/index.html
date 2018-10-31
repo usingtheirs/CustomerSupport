@@ -6,24 +6,19 @@
     
 
     
-    <title>Remote Inspector | Using Theirs</title>
+    <title>which-svn-branch | Using Theirs</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta name="description" content="Unity Remote Inspector in Asset Store Unity Remote Inspector in Unity Forum  What is this?This asset has Remote Hierarchy window and Remote Inspector window. They show you the states of your game ru">
-<meta name="keywords" content="Unity, Asset, 3D, Remote, Hierarchy, Inspector, Best">
+    <meta name="keywords" content="Unity, Asset, 3D, Remote, Hierarchy, Inspector, Best">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Remote Inspector">
-<meta property="og:url" content="https://usingtheirs.github.io/remote-inspector/index.html">
+<meta property="og:title" content="which-svn-branch">
+<meta property="og:url" content="https://usingtheirs.github.io/which-svn-branch/index.html">
 <meta property="og:site_name" content="Using Theirs">
-<meta property="og:description" content="Unity Remote Inspector in Asset Store Unity Remote Inspector in Unity Forum  What is this?This asset has Remote Hierarchy window and Remote Inspector window. They show you the states of your game ru">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://usingtheirs.github.io/images/Icon128x128.png">
-<meta property="og:updated_time" content="2018-10-31T14:11:19.224Z">
+<meta property="og:updated_time" content="2018-10-31T14:08:35.623Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Remote Inspector">
-<meta name="twitter:description" content="Unity Remote Inspector in Asset Store Unity Remote Inspector in Unity Forum  What is this?This asset has Remote Hierarchy window and Remote Inspector window. They show you the states of your game ru">
-<meta name="twitter:image" content="https://usingtheirs.github.io/images/Icon128x128.png">
+<meta name="twitter:title" content="which-svn-branch">
     
 
     
@@ -161,7 +156,7 @@ ga('send', 'pageview');
                         <div class="main-body-header">
     <h1 class="header">
     
-    <em class="page-title-link" data-url="/remote-inspector/index.html">Remote Inspector</em>
+    <em class="page-title-link" data-url="/which-svn-branch/index.html">which-svn-branch</em>
     </h1>
 </div>
 
@@ -173,7 +168,7 @@ ga('send', 'pageview');
                 
     
         <h1 class="article-title" itemprop="name">
-        Remote Inspector
+        which-svn-branch
         </h1>
     
 
@@ -182,69 +177,14 @@ ga('send', 'pageview');
         
         
         <div class="article-entry" itemprop="articleBody">
-            <p><img src="/images/Icon128x128.png" alt=""></p>
-<ul>
-<li><a href="http://u3d.as/1kp3" target="_blank" rel="noopener">Unity Remote Inspector in Asset Store</a></li>
-<li><a href="https://forum.unity.com/threads/unity-remote-inspector-0-9-beta-submitted.571960/" target="_blank" rel="noopener">Unity Remote Inspector in Unity Forum</a></li>
-</ul>
-<h2 id="What-is-this"><a href="#What-is-this" class="headerlink" title="What is this?"></a>What is this?</h2><p>This asset has Remote Hierarchy window and Remote Inspector window. They show you the states of your game running on a mobile device or a PC. And they allow you to change the fields and properties - both private and public.</p>
-<div class="video-container"><iframe src="//www.youtube.com/embed/OHeTkRJ90Z0" frameborder="0" allowfullscreen></iframe></div>
-<h2 id="Where-to-use"><a href="#Where-to-use" class="headerlink" title="Where to use?"></a>Where to use?</h2><p>In a professional project, building an APK or an IPA takes many minutes to hours. So just adding a line of log to your game to view a variable’s value can take most of your work time away. But if you build your game with this asset, you can do the following things without rebuilding your game or implementing a custom tool.</p>
-<ul>
-<li><strong>Debugging</strong> - View the hierarchy and change game objects’ fields and properties without writing any code. Even private fields and properties.</li>
-<li><strong>Performance Tuning</strong> - Turn on/off game objects and components to find what drops your game’s FPS down. </li>
-<li><strong>Balancing</strong> - Tweak level data during playtests to make your game fun. </li>
-</ul>
-<h2 id="How-to-use"><a href="#How-to-use" class="headerlink" title="How to use?"></a>How to use?</h2><p>Just drop a prefab ‘RemoteInspectorServer’ in your first scene. The prefab has a small web server in it. And it communicates with the Unity Editor parts through the network.</p>
-<p>If your PC and your mobile device are in the same network, just type the IP address of your mobile device and the port, and click the Refresh button in the Hierarchy Window. The default port is 8080. And you can change the default port in the RemoteInspectorServer prefab.</p>
-<p>Or, if your Android device is connected to your PC through a USB cable, you can make use of ADB’s port forwarding feature. The following command adds a port forwarding setting. If it is succeeded, type ‘localhost:8080’ and click the Refresh button in the Hierarchy Window. See <a href="https://docs.unity3d.com/Manual/ProfilerWindow.html" target="_blank" rel="noopener">Unity document’s  ADB profiling section</a> for details.</p>
-<p><code>adb foward tcp:8080 tcp:8080</code></p>
-<h2 id="IL2CPP"><a href="#IL2CPP" class="headerlink" title="IL2CPP"></a>IL2CPP</h2><p>If you are using IL2CPP, you can not see some components in the Remote Inspector window. It is because IL2CPP strips unused classes by static checking. To prevent it, you need to set up a link.xml file in your Unity project. See <a href="https://docs.unity3d.com/Manual/IL2CPP-BytecodeStripping.html" target="_blank" rel="noopener">Bytecode Stripping page</a> for details.</p>
-<p>Remote Inspector has an example link.xml file that preserves all UnityEngine core classes in the Example directory, <code>Example.link.xml</code>. You need to rename it to <code>link.xml</code>.</p>
-<h2 id="Limitations"><a href="#Limitations" class="headerlink" title="Limitations"></a>Limitations</h2><p>Remote Inspector shows components in a raw form. It’s different with Unity’s built-in inspector which makes use of custom editors. This may confuse you with unknown field and property names. But in some cases, this may help you with the ability to view and change raw values not exposed to Unity’s built-in inspector.</p>
-<h2 id="Settings"><a href="#Settings" class="headerlink" title="Settings"></a>Settings</h2><ul>
-<li>Type or variable names not to serialize<ul>
-<li>Add class types or variable names to SerializationConfig.IsSerializable()</li>
-</ul>
-</li>
-</ul>
-<h2 id="Roadmap"><a href="#Roadmap" class="headerlink" title="Roadmap"></a>Roadmap</h2><p>This roadmap can be changed by your feedback or implementation difficulties.</p>
-<ul>
-<li>Next Update<ul>
-<li>LayerMask Support</li>
-<li>Nested Class Support</li>
-<li>Array &amp; List Support</li>
-<li>Public/Private Method Call Support</li>
-<li>GameObject/Component Type Field Support (Read-only)</li>
-<li>MeshRenderer Material Support</li>
-</ul>
-</li>
-<li>And Next Update<ul>
-<li>Project Settings Support</li>
-<li>Class Method Call Support</li>
-<li>Filtering in Hierarchy Window</li>
-<li>Fields/Property Filtering in Inspector Window</li>
-</ul>
-</li>
-<li>Someday (If it needs)<ul>
-<li>Fields/Properties Order Settings</li>
-<li>Remote Log</li>
-<li>Multiple Hierarchy Window + Inspector Support</li>
-<li>Create GameObject &amp; Component Instance</li>
-<li>Tag Support</li>
-<li>Save Scene</li>
-</ul>
-</li>
-</ul>
-<h2 id="Support"><a href="#Support" class="headerlink" title="Support"></a>Support</h2><p>Add a new issue at <a href="https://github.com/usingtheirs/UnityRemoteInspector/issues" target="_blank" rel="noopener">https://github.com/usingtheirs/UnityRemoteInspector/issues</a></p>
-
+            
         </div>
         <footer class="article-footer">
             
 
 
 
-    <a data-url="https://usingtheirs.github.io/remote-inspector/index.html" data-id="cjnx8uzv100013wlvwdimfp8r" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://usingtheirs.github.io/which-svn-branch/index.html" data-id="cjnx8uzv500043wlv2ufjwqmc" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -546,7 +486,7 @@ ga('send', 'pageview');
     var disqus_shortname = 'using-theirs';
     
     
-    var disqus_url = 'https://usingtheirs.github.io/remote-inspector/index.html';
+    var disqus_url = 'https://usingtheirs.github.io/which-svn-branch/index.html';
     
     (function() {
     var dsq = document.createElement('script');
