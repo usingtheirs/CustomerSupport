@@ -6,18 +6,22 @@
     
 
     
-    <title>Category: Dev Log | Using Theirs</title>
+    <title>Remote Inspector Connection Troubleshooting | Using Theirs</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta name="keywords" content="Unity, Asset, 3D, Remote, Hierarchy, Inspector, Best">
+    <meta name="description" content="Net Error:Cannot connect to destination hostFirst, make sure your game is running with Remote Inspector enabled. Next, you need to check if you can connect to your mobile device from your PC. Type htt">
+<meta name="keywords" content="Unity, Asset, 3D, Remote, Hierarchy, Inspector, Best">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Using Theirs">
-<meta property="og:url" content="https://usingtheirs.github.io/categories/Dev-Log/index.html">
+<meta property="og:title" content="Remote Inspector Connection Troubleshooting">
+<meta property="og:url" content="https://usingtheirs.github.io/remote-inspector/connection-troubleshooting.html">
 <meta property="og:site_name" content="Using Theirs">
+<meta property="og:description" content="Net Error:Cannot connect to destination hostFirst, make sure your game is running with Remote Inspector enabled. Next, you need to check if you can connect to your mobile device from your PC. Type htt">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2018-11-07T11:53:54.115Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Using Theirs">
+<meta name="twitter:title" content="Remote Inspector Connection Troubleshooting">
+<meta name="twitter:description" content="Net Error:Cannot connect to destination hostFirst, make sure your game is running with Remote Inspector enabled. Next, you need to check if you can connect to your mobile device from your PC. Type htt">
     
 
     
@@ -157,174 +161,115 @@ ga('send', 'pageview');
                         <div class="main-body-header">
     <h1 class="header">
     
-    <i class="icon fa fa-folder-open"></i>Category: <em class="page-title-link">Dev Log</em>
+    <em class="page-title-link" data-url="/remote-inspector/connection-troubleshooting.html">Remote Inspector Connection Troubleshooting</em>
     </h1>
 </div>
 
                         <div class="main-body-content">
-                            
-
-    
-    
+                            <article id="page-" class="article article-single article-type-page" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
         
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/archives/2018" class="archive-year"><i class="icon fa fa-calendar-o"></i>2018</a>
-            </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2018/10/29/Preserving-Unity-Engine-Classes-against-IL2CPP-Byte-Code-Stripping/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/2018/10/29/Preserving-Unity-Engine-Classes-against-IL2CPP-Byte-Code-Stripping/Lock.jpg)" alt="Preserving Unity Engine Classes against IL2CPP Byte Code Stripping" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span><a href="https://usingtheirs.github.io/2018/10/29/Preserving-Unity-Engine-Classes-against-IL2CPP-Byte-Code-Stripping/#isso-thread"></a></span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/Dev-Log/">Dev Log</a>
-            </div>
-            <div class="date"><time datetime="2018-10-29T12:32:22.000Z" itemprop="datePublished">2018-10-29</time></div>
-        </div>
-        
+            <header class="article-header">
+                
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2018/10/29/Preserving-Unity-Engine-Classes-against-IL2CPP-Byte-Code-Stripping/">Preserving Unity Engine Classes against IL2CPP Byte Code Stripping</a>
+        Remote Inspector Connection Troubleshooting
         </h1>
     
 
-        <p class="article-excerpt">
+            </header>
+        
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <h3 id="Net-Error-Cannot-connect-to-destination-host"><a href="#Net-Error-Cannot-connect-to-destination-host" class="headerlink" title="Net Error:Cannot connect to destination host"></a>Net Error:Cannot connect to destination host</h3><p>First, make sure your game is running with Remote Inspector enabled.</p>
+<p>Next, you need to check if you can connect to your mobile device from your PC. Type <code>http://[IP Address]:[Port]</code> in the address bar of your web browser on the PC. Replace the <code>[IP Address]</code> and <code>[Port]</code> with the values you typed in the Remote Hierarchy window. If everything is OK, you can see the message <code>Welcome to Remote Inspector!</code>. </p>
+<p>If you are trying to connect your device through WIFI, make sure that your PC and your device are in the same network.</p>
+<p>Or, you are trying to connect your Android device through USB/ADB, make sure of your ADB forwarding settings. type below in the command line.</p>
+<p><code>adb forward --list</code></p>
+<p>It will show you the current forward settings like below.</p>
+<p><code>1515fa33f65c3282 tcp:8080 tcp:8080</code></p>
+
+        </div>
+        <footer class="article-footer">
             
-Unity invented IL2CPP which translates C# binaries (IL Assembly) into C++ code. To build an iOS player, you must enable IL2CPP.  On the other hand, an Android player can optionally use IL2CPP.  As IL
-        </p>
+
+
+
+    <a data-url="https://usingtheirs.github.io/remote-inspector/connection-troubleshooting.html" data-id="cjo7410110000iylvweu6xo5n" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
     </div>
 </article>
-    
+<p style="text-align:center; font-size: larger"> 
+    Enjoying the tools? Are they useful? Want more?<br>
+    <span style="font-size: 23.4px">Please buy me a coffee, via Pateron!</span><br><br>
+    <a href="https://www.patreon.com/usingtheirs">
+        <img src="/images/BecomeAPatron.png" width="217" height="51">
+    </a>
+</p>
 
+    <section id="comments">
     
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2018/10/28/Considerations-in-Remote-Inspector/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/2018/10/28/Considerations-in-Remote-Inspector/Choice.jpg)" alt="Considerations in Remote Inspector" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span><a href="https://usingtheirs.github.io/2018/10/28/Considerations-in-Remote-Inspector/#isso-thread"></a></span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/Dev-Log/">Dev Log</a>
-            </div>
-            <div class="date"><time datetime="2018-10-28T13:35:39.000Z" itemprop="datePublished">2018-10-28</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2018/10/28/Considerations-in-Remote-Inspector/">Considerations in Remote Inspector</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            
-Programming is a series of choices. There were so many trade-offs in developing Remote Inspector. Below are major decisions I have encountered during the development.
-(If you don’t know what Remote I
-        </p>
-    </div>
-</article>
-    
-        </div>
-    
-
-    
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2018/10/26/Why-I-decided-to-create-Remote-Inspector/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/2018/10/26/Why-I-decided-to-create-Remote-Inspector/BloggerAndPhone.jpg)" alt="Why I decided to create Remote Inspector" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span><a href="https://usingtheirs.github.io/2018/10/26/Why-I-decided-to-create-Remote-Inspector/#isso-thread"></a></span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/Dev-Log/">Dev Log</a>
-            </div>
-            <div class="date"><time datetime="2018-10-26T01:01:00.000Z" itemprop="datePublished">2018-10-26</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2018/10/26/Why-I-decided-to-create-Remote-Inspector/">Why I decided to create Remote Inspector</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            
-Difficuly of Debugging on DevicesIf you’ve ever developed mobile games, you will know that some bugs occur only on mobile devices. Especially when you debug rendering problems or optimize rendering y
-        </p>
-    </div>
-</article>
-    
-        </div>
-    
-
-
-    </div></section>
-
+    </section>
 
 
 
