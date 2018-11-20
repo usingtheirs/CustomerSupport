@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://usingtheirs.github.io/"/>
-  <updated>2018-11-20T12:42:58.800Z</updated>
+  <updated>2018-11-20T12:56:27.680Z</updated>
   <id>https://usingtheirs.github.io/</id>
   
   <author>
@@ -17,21 +17,20 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Displaying Svn/Git Branch on Visual Studio and Unity</title>
+    <title>Displaying SVN/GIT Branch on Visual Studio and Unity</title>
     <link href="https://usingtheirs.github.io/2018/11/12/branch-info-on-vstuio-window-title/"/>
     <id>https://usingtheirs.github.io/2018/11/12/branch-info-on-vstuio-window-title/</id>
     <published>2018-11-12T00:57:39.000Z</published>
-    <updated>2018-11-20T12:42:58.800Z</updated>
+    <updated>2018-11-20T12:56:27.680Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="mistake.jpg" alt=""></p><h3>Making sure of the Working Branch</h3><p>Have you ever made code changes on the wrong branch? Or, do you have a habit to make sure of on which branch you are working? I used to do both. I have created code changes on a wrong branch several times. Moreover, I have committed them to the wrong branch.</p><p><img src="/images/line/01-11.png" alt=""></p><p>After several times of mistake, I got into a habit of making sure of on which branch I am working every time. It was a good habit. But, it was painful to open a containing directory from Visual Studio or Unity Editor and make sure the directory is the working directory of the branch I want.</p><h3>Displaying the Branch Information</h3><p>I thought that It would be useful to show the branch information on the Visual Studio IDE or the Unity Editor UI. First, I looked for an asset in the Asset Store. But I couldn't find one. And that is a reason why I created <a href="/which-svn-branch/">Which Svn Branch?</a> and <a href="/which-git-branch/">Which Git Branch?</a> asset.</p><p><img src="/images/line/01-31.png" alt=""></p><p><img src="SvnInfo.png" alt=""></p><p>Next, I looked for an extension in the Visual Studio Marketplace. And this time, I luckily found this extension. <a href="https://www.erwinmayer.com/labs/visual-studio-2010-extension-rename-visual-studio-window-title/" target="_blank" rel="noopener">Customize Visual Studio Window Title</a>. Below is the title bar of my Visual Studio IDE. It shows the branch name.</p><p><img src="vstudio.png" alt=""></p><p>There are lots of tags in this extension. Please see the developer's <a href="https://www.erwinmayer.com/labs/visual-studio-2010-extension-rename-visual-studio-window-title/" target="_blank" rel="noopener">page</a> for the entire tags. Below is my settings.</p><p><img src="settings.png" alt=""></p><p>After installing this Visual Studio extension and my Unity assets, I have not made such a mistake to work on a wrong branch. Also, it is no longer painful to make sure of on which branch I am working! If you like me, why don't you try these? You are welcome to check out my assets: <a href="/which-svn-branch/">Which Svn Branch?</a> and <a href="/which-git-branch/">Which Git Branch?</a>.</p><p><img src="/images/line/06-05.png" alt=""></p>]]></content>
+    <content type="html"><![CDATA[<p><img src="mistake.jpg" alt=""></p><h3 id="Making-sure-of-the-Working-Branch"><a href="#Making-sure-of-the-Working-Branch" class="headerlink" title="Making sure of the Working Branch"></a>Making sure of the Working Branch</h3><p>Have you ever made code changes on the wrong branch? Or, do you have a habit to make sure of on which branch you are working? I used to do both. I have created code changes on a wrong branch several times. Moreover, I have committed them to the wrong branch.</p><p><img src="/images/line/01-11.png" alt=""></p><p>After several times of mistake, I got into a habit of making sure of on which branch I am working every time. It was a good habit. But, it was painful to open a containing directory from Visual Studio or Unity Editor and make sure the directory is the working directory of the branch I want.</p><h3 id="Displaying-the-Branch-Information"><a href="#Displaying-the-Branch-Information" class="headerlink" title="Displaying the Branch Information"></a>Displaying the Branch Information</h3><p>I thought that It would be useful to show the branch information on the Visual Studio IDE or the Unity Editor UI. First, I looked for an asset in the Asset Store. But I couldn’t find one. And that is a reason why I created <a href="/which-svn-branch/">Which SVN Branch?</a> and <a href="/which-git-branch/">Which GIT Branch?</a> asset.  </p><p><img src="/images/line/01-31.png" alt=""></p><p><img src="SvnInfo.png" alt=""></p><p>Next, I looked for an extension in the Visual Studio Marketplace. And this time, I luckily found this extension. <a href="https://www.erwinmayer.com/labs/visual-studio-2010-extension-rename-visual-studio-window-title/" target="_blank" rel="noopener">Customize Visual Studio Window Title</a>. Below is the title bar of my Visual Studio IDE. It shows the branch name.  </p><p><img src="vstudio.png" alt=""></p><p>There are lots of tags in this extension. Please see the developer’s <a href="https://www.erwinmayer.com/labs/visual-studio-2010-extension-rename-visual-studio-window-title/" target="_blank" rel="noopener">page</a> for the entire tags. Below is my settings.  </p><p><img src="settings.png" alt=""></p><p>After installing this Visual Studio extension and my Unity assets, I have not made such a mistake to work on a wrong branch. Also, it is no longer painful to make sure of on which branch I am working! If you like me, why don’t you try these? You are welcome to check out my assets: <a href="/which-svn-branch/">Which SVN Branch?</a> and <a href="/which-git-branch/">Which GIT Branch?</a>.</p><p><img src="/images/line/06-05.png" alt=""></p>]]></content>
     
     <summary type="html">
     
       
       
         &lt;p&gt;&lt;img src=&quot;mistake.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;h3&gt;Making sure of the Working Branch&lt;/h3&gt;
-&lt;p&gt;Have you ever made code changes on the wrong branch? Or,
+&lt;h3 id=&quot;Making-sure-of-the-Working-Branch&quot;&gt;&lt;a href=&quot;#Making-sure-of-the-Working-Branch&quot; class=&quot;headerl
       
     
     </summary>
