@@ -274,14 +274,14 @@ code {
 .logo {
   display: block;
   padding: 10px 0;
-  width: 64px;
+  width: 256px;
   height: 64px;
-  background-image: url("images/ResolvedLogo128x128.png");
+  background-image: url("images/ResolvedLogo512x128.png");
   background-position: 0px 10px;
   background-repeat: no-repeat;
-  -webkit-background-size: 64px 64px;
-  -moz-background-size: 64px 64px;
-  background-size: 64px 64px;
+  -webkit-background-size: 256px 64px;
+  -moz-background-size: 256px 64px;
+  background-size: 256px 64px;
 }
 .main-body {
   margin-top: -60px;
@@ -1659,11 +1659,11 @@ a.article-title:hover {
   line-height: 22px;
 }
 #footer .logo {
-  width: 51.2px;
+  width: 204.8px;
   height: 51.2px;
-  -webkit-background-size: 51.2px 51.2px;
-  -moz-background-size: 51.2px 51.2px;
-  background-size: 51.2px 51.2px;
+  -webkit-background-size: 204.8px 51.2px;
+  -moz-background-size: 204.8px 51.2px;
+  background-size: 204.8px 51.2px;
 }
 i.icon {
   display: inline-block;
